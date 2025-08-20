@@ -10,3 +10,8 @@ class Transaction(Base):
     description = Column(String)
     is_income = Column(Boolean)
     date = Column(String)
+
+class Balance(Base):
+    __tablename__ = 'balance'
+    id = Column(Integer, primary_key=True, index=True)
+    current_balance = Column(Float)
